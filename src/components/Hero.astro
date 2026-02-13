@@ -7,11 +7,28 @@ import { ShieldCheck } from 'lucide-astro';
         <div class="hero-content">
             <span class="section-subtitle">Sobre el Doctor</span>
             <h2 class="hero-title">Dr. Guillermo Antonio Ixquiac Pineda</h2>
+            <p class="hero-subtitle">Especialista en Urología Certificado</p>
             <p class="hero-text">
-                Especializado en México y reconocido por la Universidad San Carlos de Guatemala. 
-                Cuidado experto en urología general, pediátrica y oncológica.
-                Recuperando su salud, inspirando vida.
+                Médico urólogo con especialización en México y reconocimiento por la Universidad San Carlos de Guatemala. 
+                Experto en <strong>cirugía láser de próstata HoLEP</strong>, urología general, pediátrica y oncológica.
             </p>
+            <p class="hero-text">
+                Con más de 20 años de experiencia, el Dr. Ixquiac se dedica a brindar atención médica de la más 
+                alta calidad utilizando las técnicas más avanzadas y un enfoque centrado en el bienestar integral 
+                de cada paciente.
+            </p>
+
+            <div class="credentials">
+                <h4>Formación y Certificaciones</h4>
+                <ul>
+                    <li>Especialidad en Urología - México</li>
+                    <li>Reconocimiento USAC - Universidad San Carlos de Guatemala</li>
+                    <li>Certificación en Cirugía Láser HoLEP</li>
+                    <li>Oncología Urológica Avanzada</li>
+                    <li>Endourología y Cirugía Mínimamente Invasiva</li>
+                </ul>
+            </div>
+
             <div class="hero-buttons">
                 <a href="#contacto" class="btn btn-primary">Agendar Consulta</a>
                 <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
@@ -24,21 +41,29 @@ import { ShieldCheck } from 'lucide-astro';
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">1000+</span>
-                    <span class="stat-label">Pacientes Atendidos</span>
+                    <span class="stat-label">Cirugías Exitosas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Tasa de Satisfacción</span>
                 </div>
             </div>
         </div>
         <div class="hero-image">
             <div class="image-wrapper">
-                <!-- Placeholder for doctor image -->
-                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" alt="Doctor Urologo" class="main-img" />
+                <img 
+                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" 
+                    alt="Dr. Guillermo Antonio Ixquiac Pineda - Especialista en Urología y Cirugía HoLEP" 
+                    class="main-img"
+                    loading="lazy"
+                />
                 <div class="floating-card">
                     <div class="icon">
                         <ShieldCheck />
                     </div>
                     <div class="text">
                         <strong>Especialista Certificado</strong>
-                        <span>Atención de Calidad</span>
+                        <span>Atención de Excelencia</span>
                     </div>
                 </div>
             </div>
@@ -63,16 +88,59 @@ import { ShieldCheck } from 'lucide-astro';
     .hero-title {
         font-size: 2.2rem;
         line-height: 1.2;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
         color: var(--color-secondary);
     }
 
+    .hero-subtitle {
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
     .hero-text {
-        font-size: 1.1rem;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+        color: var(--color-text);
+        line-height: 1.7;
+        max-width: 600px;
+    }
+
+    .credentials {
+        background: var(--color-bg-light);
+        padding: 1.5rem;
+        border-radius: 12px;
         margin-bottom: 2rem;
-        color: var(--color-text-light);
-        max-width: 500px;
+        border-left: 4px solid var(--color-primary);
+    }
+
+    .credentials h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--color-secondary);
+    }
+
+    .credentials ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .credentials ul li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--color-text);
+        line-height: 1.5;
+    }
+
+    .credentials ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: bold;
     }
 
     .hero-buttons {
@@ -98,9 +166,16 @@ import { ShieldCheck } from 'lucide-astro';
 
     .stats {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
         border-top: 1px solid #e2e8f0;
         padding-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
     }
 
     .stat-number {

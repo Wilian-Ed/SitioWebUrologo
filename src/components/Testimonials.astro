@@ -1,0 +1,260 @@
+---
+import { Star } from 'lucide-astro';
+---
+
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Testimonios</span>
+            <h2 class="section-title">Experiencias de Nuestros Pacientes</h2>
+            <p>La satisfacción de nuestros pacientes es nuestra mayor recompensa.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "Después de años sufriendo con problemas de próstata, el Dr. Ixquiac me realizó 
+                    el procedimiento HoLEP. La recuperación fue mucho más rápida de lo que esperaba. 
+                    Ahora puedo dormir toda la noche sin levantarme. Un cambio de vida total."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Carlos M.</strong>
+                    <span>Paciente HoLEP, 67 años</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "Excelente profesional y ser humano. Me explicó detalladamente todas las opciones 
+                    de tratamiento para mi cálculo renal. La atención fue personalizada y el resultado 
+                    excelente. Altamente recomendado."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Luis R.</strong>
+                    <span>Tratamiento de cálculos renales</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "Mi hijo requería un procedimiento urológico y el Dr. Ixquiac nos dio mucha confianza 
+                    desde la primera consulta. Su experiencia en urología pediátrica es evidente. 
+                    Todo salió perfecto y mi hijo se recuperó rápidamente."
+                </p>
+                <div class="testimonial-author">
+                    <strong>María S.</strong>
+                    <span>Madre de paciente pediátrico</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "Tuve mi cirugía de próstata con láser y quedé muy satisfecho con los resultados. 
+                    El doctor es muy profesional y su equipo es excelente. Las instalaciones son 
+                    modernas y el seguimiento postoperatorio fue impecable."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Roberto P.</strong>
+                    <span>Cirugía láser de próstata</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "El Dr. Ixquiac es un especialista excepcional. Me atendió por un problema oncológico 
+                    con mucha empatía y profesionalismo. Su conocimiento y experiencia me dieron mucha 
+                    tranquilidad durante todo el proceso."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Jorge A.</strong>
+                    <span>Tratamiento oncológico urológico</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                    <Star fill="currentColor" size={20} />
+                </div>
+                <p class="testimonial-text">
+                    "Muy agradecido con el doctor por su atención. Fui por un problema de infecciones 
+                    urinarias recurrentes y después de los estudios y tratamiento, el problema se resolvió. 
+                    Un médico que realmente escucha a sus pacientes."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Manuel G.</strong>
+                    <span>Tratamiento infección urinaria</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="badge-item">
+                <strong>20+</strong>
+                <span>Años de experiencia</span>
+            </div>
+            <div class="badge-item">
+                <strong>1000+</strong>
+                <span>Cirugías exitosas</span>
+            </div>
+            <div class="badge-item">
+                <strong>95%</strong>
+                <span>Tasa de satisfacción</span>
+            </div>
+            <div class="badge-item">
+                <strong>100%</strong>
+                <span>Compromiso con el paciente</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .testimonials {
+        padding: 5rem 0;
+        background: var(--color-bg-light);
+    }
+
+    .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 4rem;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .testimonial-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-color: var(--color-primary);
+    }
+
+    .stars {
+        display: flex;
+        gap: 0.25rem;
+        color: #fbbf24;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-text);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .testimonial-author strong {
+        color: var(--color-secondary);
+        font-size: 1.05rem;
+    }
+
+    .testimonial-author span {
+        color: var(--color-text-light);
+        font-size: 0.9rem;
+    }
+
+    .trust-badges {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        padding: 3rem;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .badge-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .badge-item strong {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        line-height: 1;
+    }
+
+    .badge-item span {
+        color: var(--color-text-light);
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+        .testimonials {
+            padding: 3rem 0;
+        }
+
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .trust-badges {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>

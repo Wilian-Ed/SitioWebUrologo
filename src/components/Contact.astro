@@ -1,5 +1,5 @@
 ---
-import { MapPin, Phone } from 'lucide-astro';
+import { MapPin, Phone, MessageCircle, Clock } from 'lucide-astro';
 ---
 
 <section id="contacto" class="contact">
@@ -35,11 +35,36 @@ import { MapPin, Phone } from 'lucide-astro';
                             </p>
                         </div>
                     </div>
+
+                    <div class="item">
+                        <div class="icon-box">
+                            <Clock />
+                        </div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>
+                                Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+                                Sábado: Con cita previa
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="cta-box">
                     <h3>¿Listo para agendar?</h3>
-                    <a href="tel:77637933" class="btn btn-primary">Llamar Ahora</a>
+                    <div class="cta-buttons">
+                        <a href="tel:77637933" class="btn btn-primary">
+                            <Phone size={20} />
+                            Llamar Ahora
+                        </a>
+                        <a href="https://wa.me/50277637933?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20con%20el%20Dr.%20Ixquiac" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-whatsapp">
+                            <MessageCircle size={20} />
+                            WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -53,6 +78,7 @@ import { MapPin, Phone } from 'lucide-astro';
                     marginwidth="0" 
                     src="https://maps.google.com/maps?q=Edificio%20M%C3%A9dico%20San%20Lucas%2C%2013%20Avenida%206-20%20zona%203%2C%20Quetzaltenango&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     title="Ubicación Clínica"
+                    loading="lazy"
                 ></iframe>
             </div>
         </div>
@@ -121,6 +147,37 @@ import { MapPin, Phone } from 'lucide-astro';
 
     .cta-box h3 {
         margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-whatsapp {
+        background-color: #25D366;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-whatsapp:hover {
+        background-color: #20BA5A;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
     }
 
     @media (min-width: 992px) {
