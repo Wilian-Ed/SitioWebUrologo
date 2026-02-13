@@ -1,0 +1,612 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { ShieldCheck, Award, Heart, Briefcase } from 'lucide-astro';
+---
+
+<Layout 
+	title="Sobre el Dr. Guillermo Ixquiac | Perfil Profesional y Trayectoria"
+	description="Conozca la trayectoria académica, certificaciones y filosofía de trabajo del Dr. Guillermo Antonio Ixquiac Pineda, especialista certificado en urología con más de 20 años de experiencia."
+	keywords="doctor urólogo Guatemala, perfil médico urología, especialista certificado urología, trayectoria urología Quetzaltenango"
+>
+	<Navbar />
+	<main>
+		<!-- Hero Section -->
+		<section class="about-hero">
+			<div class="container">
+				<span class="section-subtitle">Perfil Profesional</span>
+				<h1 class="hero-title">Dr. Guillermo Antonio Ixquiac Pineda</h1>
+				<p class="hero-subtitle">Especialista Certificado en Urología</p>
+			</div>
+		</section>
+
+		<!-- Profile Content -->
+		<section class="profile-content">
+			<div class="container">
+				<div class="profile-grid">
+					<div class="profile-image">
+						<img 
+							src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" 
+							alt="Dr. Guillermo Antonio Ixquiac Pineda en su consultorio" 
+							class="main-img"
+						/>
+						<div class="image-badge">
+							<ShieldCheck size={32} />
+							<span>Certificado y Reconocido</span>
+						</div>
+					</div>
+					
+					<div class="profile-text">
+						<h2>Cuidado Integral de la Salud Urinaria y Reproductiva</h2>
+						<p class="lead-text">
+							Con más de 20 años de experiencia en el campo de la urología, me he dedicado a brindar 
+							atención médica de la más alta calidad, combinando tecnología de mínima invasión con 
+							un trato humano y personalizado.
+						</p>
+						<p>
+							Mi compromiso es ofrecer a cada paciente las técnicas más avanzadas en urología, 
+							desde procedimientos de diagnóstico hasta cirugías complejas, siempre priorizando 
+							la recuperación rápida y los mejores resultados clínicos.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Academic Background -->
+		<section class="academic-section">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Formación Académica</span>
+					<h2 class="section-title">Trayectoria y Educación</h2>
+				</div>
+
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-icon">
+							<Award />
+						</div>
+						<div class="timeline-content">
+							<h3>Especialidad en Urología</h3>
+							<p class="timeline-location">México</p>
+							<p>Formación especializada en urología general, oncológica y pediátrica en instituciones 
+							reconocidas internacionalmente, con énfasis en técnicas quirúrgicas avanzadas.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-icon">
+							<Award />
+						</div>
+						<div class="timeline-content">
+							<h3>Reconocimiento Profesional</h3>
+							<p class="timeline-location">Universidad San Carlos de Guatemala (USAC)</p>
+							<p>Reconocimiento oficial de la especialidad médica en Guatemala, avalado por la 
+							institución académica más prestigiosa del país.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-icon">
+							<Award />
+						</div>
+						<div class="timeline-content">
+							<h3>Certificación en Cirugía Láser HoLEP</h3>
+							<p class="timeline-location">Especialización Internacional</p>
+							<p>Entrenamiento especializado en la técnica HoLEP (Enucleación de Próstata con Láser de Holmio), 
+							el procedimiento más avanzado para el tratamiento de la hiperplasia prostática benigna.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-icon">
+							<Award />
+						</div>
+						<div class="timeline-content">
+							<h3>Oncología Urológica Avanzada</h3>
+							<p class="timeline-location">Formación Continua</p>
+							<p>Capacitación constante en los últimos avances en diagnóstico y tratamiento del 
+							cáncer urológico, incluyendo cáncer de próstata, riñón, vejiga y testículos.</p>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-icon">
+							<Award />
+						</div>
+						<div class="timeline-content">
+							<h3>Endourología y Cirugía Mínimamente Invasiva</h3>
+							<p class="timeline-location">Especialización Técnica</p>
+							<p>Dominio de técnicas endoscópicas avanzadas para el tratamiento de cálculos renales, 
+							estenosis uretrales y otras patologías del tracto urinario.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Certifications -->
+		<section class="certifications">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Certificaciones y Membresías</span>
+					<h2 class="section-title">Respaldado por las Principales Organizaciones Médicas</h2>
+				</div>
+
+				<div class="cert-grid">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<ShieldCheck />
+						</div>
+						<h3>Asociación Guatemalteca de Urología</h3>
+						<p>Miembro activo de la asociación nacional de especialistas en urología</p>
+					</div>
+
+					<div class="cert-card">
+						<div class="cert-icon">
+							<ShieldCheck />
+						</div>
+						<h3>Confederación Americana de Urología</h3>
+						<p>Afiliación con la organización continental de urología</p>
+					</div>
+
+					<div class="cert-card">
+						<div class="cert-icon">
+							<ShieldCheck />
+						</div>
+						<h3>Colegio de Médicos y Cirujanos de Guatemala</h3>
+						<p>Colegiado activo con licencia vigente para ejercer la medicina</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Philosophy -->
+		<section class="philosophy">
+			<div class="container">
+				<div class="philosophy-content">
+					<div class="philosophy-text">
+						<span class="section-subtitle">Mi Filosofía</span>
+						<h2>¿Por Qué Decidí Ser Urólogo?</h2>
+						<p>
+							La urología representa la perfecta combinación entre la medicina interna y la cirugía, 
+							permitiéndome establecer relaciones duraderas con mis pacientes mientras aplico las 
+							técnicas quirúrgicas más avanzadas.
+						</p>
+						<p>
+							Decidí especializarme en urología porque esta disciplina me permite hacer una diferencia 
+							tangible en la calidad de vida de las personas. Desde ayudar a un paciente con cáncer 
+							hasta resolver problemas que afectan la vida cotidiana, cada día es una oportunidad 
+							para cambiar vidas.
+						</p>
+
+						<h3><Heart class="inline-icon" /> Cómo Trato a Mis Pacientes</h3>
+						<ul class="philosophy-list">
+							<li><strong>Escucha activa:</strong> Cada paciente es único, y sus preocupaciones merecen toda mi atención.</li>
+							<li><strong>Educación clara:</strong> Explico cada diagnóstico y tratamiento en términos comprensibles.</li>
+							<li><strong>Tecnología avanzada:</strong> Utilizo las técnicas más modernas y menos invasivas disponibles.</li>
+							<li><strong>Trato humano:</strong> Entiendo que visitar al urólogo puede ser incómodo, por eso priorizo la empatía y el respeto.</li>
+							<li><strong>Seguimiento continuo:</strong> Mi compromiso no termina después de la cirugía, sino que incluye un acompañamiento integral.</li>
+						</ul>
+					</div>
+
+					<div class="philosophy-image">
+						<img 
+							src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&auto=format&fit=crop" 
+							alt="Dr. Ixquiac en quirófano" 
+							class="doctor-action-img"
+						/>
+						<div class="image-caption">
+							<Briefcase />
+							<span>Tecnología de vanguardia al servicio de la salud</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stats Section -->
+		<section class="stats-section">
+			<div class="container">
+				<div class="stats-grid">
+					<div class="stat-card">
+						<span class="stat-number">20+</span>
+						<span class="stat-label">Años de Experiencia</span>
+					</div>
+					<div class="stat-card">
+						<span class="stat-number">1000+</span>
+						<span class="stat-label">Cirugías Exitosas</span>
+					</div>
+					<div class="stat-card">
+						<span class="stat-number">95%</span>
+						<span class="stat-label">Tasa de Satisfacción</span>
+					</div>
+					<div class="stat-card">
+						<span class="stat-number">500+</span>
+						<span class="stat-label">Procedimientos HoLEP</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>¿Listo para Cuidar de Su Salud Urológica?</h2>
+					<p>Agende su consulta hoy y reciba atención médica de excelencia</p>
+					<div class="cta-buttons">
+						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
+						<a href="/servicios" class="btn btn-outline">Ver Servicios</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.about-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		padding: 6rem 0 4rem;
+		text-align: center;
+		color: white;
+	}
+
+	.hero-title {
+		font-size: 2.5rem;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		opacity: 0.9;
+	}
+
+	.profile-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.profile-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.profile-image {
+		position: relative;
+	}
+
+	.main-img {
+		width: 100%;
+		border-radius: 24px;
+		box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+	}
+
+	.image-badge {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		background: white;
+		padding: 1rem 1.5rem;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+		color: var(--color-primary);
+		font-weight: 600;
+	}
+
+	.profile-text h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-secondary);
+	}
+
+	.lead-text {
+		font-size: 1.15rem;
+		line-height: 1.8;
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-weight: 500;
+	}
+
+	.academic-section {
+		padding: 5rem 0;
+		background: #f8fafc;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.timeline {
+		max-width: 800px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.timeline::before {
+		content: '';
+		position: absolute;
+		left: 30px;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: var(--color-primary);
+	}
+
+	.timeline-item {
+		display: flex;
+		gap: 2rem;
+		margin-bottom: 3rem;
+		position: relative;
+	}
+
+	.timeline-icon {
+		width: 60px;
+		height: 60px;
+		background: var(--color-primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+		z-index: 1;
+	}
+
+	.timeline-content {
+		flex: 1;
+		background: white;
+		padding: 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+	}
+
+	.timeline-content h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		color: var(--color-secondary);
+	}
+
+	.timeline-location {
+		color: var(--color-primary);
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+	}
+
+	.certifications {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.cert-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.cert-card {
+		background: var(--color-bg-light);
+		padding: 2rem;
+		border-radius: 16px;
+		text-align: center;
+		border: 2px solid transparent;
+		transition: all 0.3s;
+	}
+
+	.cert-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	}
+
+	.cert-icon {
+		width: 60px;
+		height: 60px;
+		background: white;
+		color: var(--color-primary);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+	}
+
+	.cert-card h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-secondary);
+	}
+
+	.philosophy {
+		padding: 5rem 0;
+		background: #f8fafc;
+	}
+
+	.philosophy-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.philosophy-text h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-secondary);
+	}
+
+	.philosophy-text h3 {
+		font-size: 1.5rem;
+		margin: 2rem 0 1rem;
+		color: var(--color-secondary);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.inline-icon {
+		color: var(--color-primary);
+	}
+
+	.philosophy-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.philosophy-list li {
+		padding: 0.75rem 0;
+		padding-left: 2rem;
+		position: relative;
+		line-height: 1.6;
+	}
+
+	.philosophy-list li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--color-primary);
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+
+	.philosophy-image {
+		position: relative;
+	}
+
+	.doctor-action-img {
+		width: 100%;
+		border-radius: 24px;
+		box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+	}
+
+	.image-caption {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		background: white;
+		padding: 1rem 1.5rem;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+		color: var(--color-primary);
+		font-weight: 600;
+		max-width: 200px;
+	}
+
+	.stats-section {
+		padding: 4rem 0;
+		background: var(--color-secondary);
+		color: white;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		text-align: center;
+	}
+
+	.stat-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: 800;
+		color: var(--color-primary);
+		font-family: var(--font-heading);
+	}
+
+	.stat-label {
+		font-size: 1rem;
+		opacity: 0.9;
+	}
+
+	.cta-section {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.cta-content {
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: var(--color-secondary);
+	}
+
+	.cta-content p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+		color: var(--color-text-light);
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn-outline {
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		border: 2px solid var(--color-secondary);
+		color: var(--color-secondary);
+		transition: all 0.3s;
+	}
+
+	.btn-outline:hover {
+		background: var(--color-secondary);
+		color: white;
+	}
+
+	@media (min-width: 768px) {
+		.hero-title {
+			font-size: 3.5rem;
+		}
+
+		.profile-grid,
+		.philosophy-content {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.timeline::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.timeline-item {
+			width: 50%;
+			padding-right: 2rem;
+		}
+
+		.timeline-item:nth-child(even) {
+			margin-left: 50%;
+			padding-right: 0;
+			padding-left: 2rem;
+		}
+	}
+</style>

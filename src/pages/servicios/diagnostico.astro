@@ -1,0 +1,744 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { Search, CheckCircle, Activity, Eye, Clipboard, Microscope } from 'lucide-astro';
+---
+
+<Layout 
+	title="Diagnóstico Urológico | Dr. Guillermo Ixquiac - Quetzaltenango"
+	description="Diagnóstico urológico avanzado en Quetzaltenango. Ultrasonido urológico, cistoscopía, estudios urodinámicos y equipo diagnóstico de última generación."
+	keywords="diagnóstico urológico Guatemala, ultrasonido urológico, cistoscopía, urodinamia, Quetzaltenango, estudios urológicos"
+>
+	<Navbar />
+	<main>
+		<!-- Hero Section -->
+		<section class="service-hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-badge">
+						<Search size={24} />
+						<span>Diagnóstico Avanzado</span>
+					</div>
+					<h1 class="hero-title">Diagnóstico Urológico</h1>
+					<p class="hero-subtitle">
+						Estudios Diagnósticos de Alta Precisión con Tecnología de Vanguardia para Evaluación Urológica Completa
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- What is Urologic Diagnosis -->
+		<section class="what-is">
+			<div class="container">
+				<div class="content-grid">
+					<div class="content-text">
+						<span class="section-subtitle">Diagnóstico Urológico</span>
+						<h2>Tecnología Avanzada para Diagnóstico Preciso</h2>
+						<p>
+							El diagnóstico preciso es fundamental para un tratamiento efectivo. Contamos con 
+							tecnología de última generación que nos permite identificar con exactitud una amplia 
+							gama de condiciones urológicas, desde infecciones simples hasta tumores y problemas 
+							funcionales complejos.
+						</p>
+						<p>
+							Nuestro equipamiento incluye ultrasonido de alta resolución, cistoscopio flexible 
+							digital, equipo de urodinamia computarizado y laboratorio especializado. Esto nos 
+							permite ofrecer diagnósticos precisos en el menor tiempo posible, iniciando el 
+							tratamiento adecuado sin demoras innecesarias.
+						</p>
+
+						<div class="highlight-box">
+							<Eye class="highlight-icon" />
+							<div>
+								<h3>Equipamiento de Vanguardia</h3>
+								<p>Tecnología diagnóstica de última generación para evaluaciones precisas y resultados confiables</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-image">
+						<img 
+							src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&auto=format&fit=crop" 
+							alt="Diagnóstico urológico avanzado" 
+							class="procedure-img"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Benefits -->
+		<section class="benefits">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Importancia del Diagnóstico Preciso</span>
+					<h2 class="section-title">¿Por Qué es Crucial un Buen Diagnóstico?</h2>
+				</div>
+
+				<div class="benefits-grid">
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<CheckCircle />
+						</div>
+						<h3>Diagnóstico Certero</h3>
+						<p>Identificación precisa del problema para tratamiento dirigido y efectivo.</p>
+					</div>
+
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<Activity />
+						</div>
+						<h3>Detección Temprana</h3>
+						<p>Identificar problemas en etapas iniciales cuando son más tratables.</p>
+					</div>
+
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<Eye />
+						</div>
+						<h3>Visualización Directa</h3>
+						<p>Ver directamente el interior del tracto urinario con tecnología endoscópica.</p>
+					</div>
+
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<Clipboard />
+						</div>
+						<h3>Evaluación Completa</h3>
+						<p>Estudios integrales que analizan estructura y función del sistema urinario.</p>
+					</div>
+
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<Microscope />
+						</div>
+						<h3>Análisis Especializado</h3>
+						<p>Laboratorio con pruebas específicas para condiciones urológicas.</p>
+					</div>
+
+					<div class="benefit-item">
+						<div class="benefit-icon">
+							<CheckCircle />
+						</div>
+						<h3>Menos Procedimientos</h3>
+						<p>Diagnóstico correcto desde el inicio evita estudios y tratamientos innecesarios.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Diagnostic Tests -->
+		<section class="candidates">
+			<div class="container">
+				<div class="content-grid reverse">
+					<div class="content-image">
+						<img 
+							src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800&auto=format&fit=crop" 
+							alt="Estudios diagnósticos urológicos" 
+							class="procedure-img"
+						/>
+					</div>
+
+					<div class="content-text">
+						<span class="section-subtitle">Estudios Disponibles</span>
+						<h2>¿Cuándo Necesita Estudios Diagnósticos?</h2>
+						
+						<ul class="symptoms-list">
+							<li>Sangre en la orina (visible o microscópica)</li>
+							<li>Infecciones urinarias recurrentes</li>
+							<li>Dificultad o dolor al orinar</li>
+							<li>Incontinencia urinaria</li>
+							<li>Sospecha de cálculos renales</li>
+							<li>Evaluación de masa renal o vesical</li>
+							<li>Problemas de vaciamiento vesical</li>
+							<li>Seguimiento de cáncer urológico</li>
+						</ul>
+
+						<div class="highlight-box alert">
+							<h3>¿Necesita un Diagnóstico Preciso?</h3>
+							<p>Contamos con el equipamiento necesario para realizar una evaluación completa y llegar a un diagnóstico certero en el menor tiempo posible.</p>
+							<a href="/contacto" class="btn btn-primary">Agendar Estudios</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main Diagnostic Procedures -->
+		<section class="procedure-details">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Procedimientos Diagnósticos</span>
+					<h2 class="section-title">Principales Estudios que Realizamos</h2>
+				</div>
+
+				<div class="steps-grid">
+					<div class="step-card">
+						<div class="step-number">1</div>
+						<h3>Ultrasonido Urológico</h3>
+						<p>Evaluación no invasiva de riñones, vejiga, próstata y sistema urinario superior.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-number">2</div>
+						<h3>Cistoscopía</h3>
+						<p>Visualización directa del interior de uretra y vejiga con cistoscopio flexible.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-number">3</div>
+						<h3>Estudios Urodinámicos</h3>
+						<p>Evaluación funcional de vejiga y esfínteres para problemas de vaciamiento e incontinencia.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-number">4</div>
+						<h3>Análisis Especializados</h3>
+						<p>Urocultivo, citología urinaria, PSA, marcadores tumorales y estudios metabólicos.</p>
+					</div>
+				</div>
+
+				<div class="procedure-info">
+					<div class="info-item">
+						<strong>Ultrasonido:</strong> 20-30 minutos, no invasivo, sin preparación especial
+					</div>
+					<div class="info-item">
+						<strong>Cistoscopía:</strong> 10-15 minutos, anestesia local, ambulatorio
+					</div>
+					<div class="info-item">
+						<strong>Urodinamia:</strong> 30-45 minutos, mínimamente invasivo, sin sedación
+					</div>
+					<div class="info-item">
+						<strong>Resultados:</strong> Interpretación inmediata o en 24-48 horas según estudio
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Specific Tests Details -->
+		<section class="recovery">
+			<div class="container">
+				<div class="content-grid">
+					<div class="content-text">
+						<span class="section-subtitle">Estudios Especializados</span>
+						<h2>Detalles de Procedimientos Diagnósticos</h2>
+						
+						<div class="recovery-timeline">
+							<div class="timeline-item">
+								<strong>Ultrasonido Urológico:</strong>
+								<p>Visualiza riñones, uréteres, vejiga y próstata. Detecta cálculos, tumores, hidronefrosis y anomalías estructurales. Indoloro y sin radiación.</p>
+							</div>
+
+							<div class="timeline-item">
+								<strong>Cistoscopía Flexible:</strong>
+								<p>Visualización directa con cámara de alta definición. Identifica tumores, cálculos, inflamación, estenosis. Con anestesia local, bien tolerado.</p>
+							</div>
+
+							<div class="timeline-item">
+								<strong>Estudios Urodinámicos:</strong>
+								<p>Mide presiones vesicales, flujo urinario y función del esfínter. Esencial para incontinencia y problemas de vaciamiento.</p>
+							</div>
+
+							<div class="timeline-item">
+								<strong>Flujometría:</strong>
+								<p>Medición del flujo urinario. Simple, rápido y no invasivo. Detecta obstrucción prostática y problemas de vaciamiento.</p>
+							</div>
+						</div>
+
+						<h3>Análisis de Laboratorio</h3>
+						<ul class="recommendations-list">
+							<li>Uroanálisis completo y urocultivo</li>
+							<li>PSA total y libre (próstata)</li>
+							<li>Citología urinaria (células anormales)</li>
+							<li>Perfil metabólico para cálculos</li>
+							<li>Marcadores tumorales específicos</li>
+							<li>Análisis de cálculos renales</li>
+						</ul>
+					</div>
+
+					<div class="content-image">
+						<img 
+							src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" 
+							alt="Procedimientos diagnósticos" 
+							class="procedure-img"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cystoscopy Details -->
+		<section class="what-is">
+			<div class="container">
+				<div class="content-grid reverse">
+					<div class="content-image">
+						<img 
+							src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=800&auto=format&fit=crop" 
+							alt="Cistoscopía" 
+							class="procedure-img"
+						/>
+					</div>
+
+					<div class="content-text">
+						<span class="section-subtitle">Cistoscopía</span>
+						<h2>Visualización Directa del Tracto Urinario</h2>
+						<p>
+							La cistoscopía es un procedimiento que permite visualizar directamente el interior 
+							de la uretra y vejiga mediante un instrumento delgado con cámara (cistoscopio). 
+							Utilizamos cistoscopio flexible de última generación que ofrece imágenes de alta 
+							definición con máxima comodidad para el paciente.
+						</p>
+						
+						<h3>¿Cuándo se Indica?</h3>
+						<ul class="symptoms-list">
+							<li>Sangre en la orina (hematuria)</li>
+							<li>Infecciones urinarias recurrentes</li>
+							<li>Sospecha de tumor vesical</li>
+							<li>Seguimiento de cáncer de vejiga</li>
+							<li>Cálculos vesicales</li>
+							<li>Estenosis uretral</li>
+							<li>Síntomas irritativos sin causa clara</li>
+							<li>Evaluación de próstata desde la vejiga</li>
+						</ul>
+
+						<div class="highlight-box">
+							<Eye class="highlight-icon" />
+							<div>
+								<h3>Procedimiento Bien Tolerado</h3>
+								<p>Con cistoscopio flexible y anestesia local, la mayoría de pacientes toleran muy bien el procedimiento con mínimas molestias.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="faq">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Preguntas Frecuentes</span>
+					<h2 class="section-title">Respuestas a Sus Dudas</h2>
+				</div>
+
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>¿El ultrasonido urológico es diferente al normal?</h3>
+						<p>Se realiza con protocolo específico para evaluar riñones, vejiga y próstata. Incluye medición de residuo post-miccional y volumen prostático.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿La cistoscopía duele?</h3>
+						<p>Con cistoscopio flexible y anestesia local (gel), es generalmente bien tolerado. Puede sentir presión o molestia leve, pero no dolor intenso.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Qué preparación necesito para estos estudios?</h3>
+						<p>Ultrasonido requiere vejiga llena. Cistoscopía no requiere preparación especial. Urodinamia necesita vejiga vacía al inicio. Se darán instrucciones específicas.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Cuándo obtendré los resultados?</h3>
+						<p>Ultrasonido y cistoscopía tienen interpretación inmediata. Urocultivos toman 48-72 horas. PSA y otros análisis: 24-48 horas.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Puedo trabajar después de una cistoscopía?</h3>
+						<p>Sí, es un procedimiento ambulatorio. Puede haber molestia leve al orinar por 24 horas, pero generalmente puede retomar actividades normales.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Los estudios urodinámicos son incómodos?</h3>
+						<p>Requieren colocar un catéter pequeño, lo cual puede ser incómodo brevemente. El estudio en sí es bien tolerado y no requiere sedación.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>¿Necesita Estudios Diagnósticos?</h2>
+					<p>Evaluación completa con tecnología avanzada para diagnóstico preciso y oportuno</p>
+					<div class="cta-buttons">
+						<a href="/contacto" class="btn btn-primary">Agendar Estudios</a>
+						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.service-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		padding: 8rem 0 5rem;
+		color: white;
+		text-align: center;
+	}
+
+	.hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(255,255,255,0.2);
+		padding: 0.5rem 1rem;
+		border-radius: 50px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		max-width: 800px;
+		margin: 0 auto;
+		opacity: 0.95;
+		line-height: 1.6;
+	}
+
+	.what-is,
+	.candidates {
+		padding: 5rem 0;
+	}
+
+	.what-is {
+		background: white;
+	}
+
+	.candidates {
+		background: #f8fafc;
+	}
+
+	.content-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.content-text h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-secondary);
+	}
+
+	.content-text p {
+		font-size: 1.05rem;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		color: var(--color-text);
+	}
+
+	.procedure-img {
+		width: 100%;
+		border-radius: 24px;
+		box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+	}
+
+	.highlight-box {
+		background: var(--color-bg-light);
+		padding: 2rem;
+		border-radius: 16px;
+		border-left: 4px solid var(--color-primary);
+		margin-top: 2rem;
+		display: flex;
+		gap: 1.5rem;
+		align-items: flex-start;
+	}
+
+	.highlight-icon {
+		color: var(--color-primary);
+		flex-shrink: 0;
+	}
+
+	.highlight-box h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		color: var(--color-secondary);
+	}
+
+	.highlight-box.alert {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		color: white;
+		border: none;
+		display: block;
+	}
+
+	.highlight-box.alert h3,
+	.highlight-box.alert p {
+		color: white;
+	}
+
+	.highlight-box.alert .btn {
+		margin-top: 1rem;
+		background: white;
+		color: var(--color-primary);
+	}
+
+	.highlight-box.alert .btn:hover {
+		background: rgba(255,255,255,0.9);
+	}
+
+	.benefits {
+		padding: 5rem 0;
+		background: #f8fafc;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--color-secondary);
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.benefit-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+		transition: transform 0.3s;
+	}
+
+	.benefit-item:hover {
+		transform: translateY(-5px);
+	}
+
+	.benefit-icon {
+		width: 60px;
+		height: 60px;
+		background: var(--color-bg-light);
+		color: var(--color-primary);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.benefit-item h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-secondary);
+	}
+
+	.symptoms-list {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	.symptoms-list li {
+		padding: 0.75rem 0;
+		padding-left: 2rem;
+		position: relative;
+		line-height: 1.6;
+	}
+
+	.symptoms-list li::before {
+		content: "•";
+		position: absolute;
+		left: 0;
+		color: var(--color-primary);
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	.procedure-details {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.steps-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.step-card {
+		background: var(--color-bg-light);
+		padding: 2rem;
+		border-radius: 16px;
+		text-align: center;
+	}
+
+	.step-number {
+		width: 60px;
+		height: 60px;
+		background: var(--color-primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 800;
+		margin: 0 auto 1.5rem;
+	}
+
+	.step-card h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-secondary);
+	}
+
+	.procedure-info {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		background: var(--color-secondary);
+		padding: 2rem;
+		border-radius: 16px;
+		color: white;
+	}
+
+	.info-item {
+		padding: 1rem;
+		border-left: 3px solid var(--color-primary);
+	}
+
+	.recovery {
+		padding: 5rem 0;
+		background: #f8fafc;
+	}
+
+	.recovery-timeline {
+		margin: 2rem 0;
+	}
+
+	.timeline-item {
+		padding: 1.5rem;
+		background: white;
+		border-radius: 12px;
+		margin-bottom: 1rem;
+		border-left: 4px solid var(--color-primary);
+	}
+
+	.timeline-item strong {
+		color: var(--color-primary);
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.recommendations-list {
+		list-style: none;
+		padding: 0;
+		margin-top: 1.5rem;
+	}
+
+	.recommendations-list li {
+		padding: 0.75rem 0;
+		padding-left: 2rem;
+		position: relative;
+	}
+
+	.recommendations-list li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--color-primary);
+		font-weight: bold;
+	}
+
+	.faq {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.faq-item {
+		background: var(--color-bg-light);
+		padding: 2rem;
+		border-radius: 16px;
+	}
+
+	.faq-item h3 {
+		font-size: 1.15rem;
+		margin-bottom: 1rem;
+		color: var(--color-secondary);
+	}
+
+	.cta-section {
+		padding: 5rem 0;
+		background: var(--color-secondary);
+		color: white;
+		text-align: center;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.cta-content p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+		color: rgba(255,255,255,0.9);
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn-outline {
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		border: 2px solid white;
+		color: white;
+		transition: all 0.3s;
+	}
+
+	.btn-outline:hover {
+		background: white;
+		color: var(--color-secondary);
+	}
+
+	@media (min-width: 768px) {
+		.hero-title {
+			font-size: 4rem;
+		}
+
+		.content-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.content-grid.reverse {
+			direction: rtl;
+		}
+
+		.content-grid.reverse > * {
+			direction: ltr;
+		}
+	}
+</style>
