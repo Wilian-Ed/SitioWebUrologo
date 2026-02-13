@@ -1,0 +1,116 @@
+---
+import { Baby, Scan, Activity, Microscope, Zap, Users } from 'lucide-astro';
+---
+
+<section id="servicios" class="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Nuestros Servicios</span>
+            <h2 class="section-title">Cuidado Médico Integral</h2>
+            <p>Diagnóstico y tratamiento avanzado para todas las condiciones urológicas.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">
+                    <Baby size={32} />
+                </div>
+                <h3>Urología General y Pediátrica</h3>
+                <p>Atención especializada para adultos y niños, abordando condiciones comunes y complejas del sistema urinario.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Scan size={32} />
+                </div>
+                <h3>Ultrasonido de Vía Urinarias</h3>
+                <p>Diagnóstico por imagen preciso para riñones, vejiga y próstata utilizando tecnología moderna.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Activity size={32} />
+                </div>
+                <h3>Oncología Urológica</h3>
+                <p>Detección y tratamiento de cáncer de próstata, riñones, vejiga y testículos.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Microscope size={32} />
+                </div>
+                <h3>Endourología</h3>
+                <p>Procedimientos mínimamente invasivos para tratar piedras y otras condiciones del tracto urinario.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Zap size={32} />
+                </div>
+                <h3>Cálculos Renales y Litotricia</h3>
+                <p>Tratamiento efectivo para la eliminación de cálculos renales (piedras) mediante litotricia extracorpórea.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Users size={32} />
+                </div>
+                <h3>Infertilidad e Impotencia</h3>
+                <p>Diagnóstico y opciones de tratamiento para mejorar la salud reproductiva y sexual masculina.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .services {
+        padding: 5rem 0;
+        background-color: var(--color-white);
+    }
+
+    .section-header {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 4rem;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: var(--color-bg-light);
+        padding: 2rem;
+        border-radius: 16px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid transparent;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border-color: var(--color-primary);
+        background: white;
+    }
+
+    .icon {
+        margin-bottom: 1.5rem;
+        background: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        color: var(--color-primary);
+    }
+
+    .service-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--color-secondary);
+        font-size: 1.25rem;
+    }
+</style>

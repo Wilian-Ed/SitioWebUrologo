@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/Dr%20Guillermo%20Ixquiac/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Dr. Guillermo Antonio Ixquiac Pineda | Urólogo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		/* Color Palette based on the design image */
+		--color-primary: #0ea5e9; /* Sky Blue */
+		--color-primary-dark: #0284c7;
+		--color-secondary: #0f172a; /* Dark Navy/Slate */
+		--color-text: #334155; /* Slate Gray */
+		--color-text-light: #64748b;
+		--color-bg-light: #f0f9ff;
+		--color-white: #ffffff;
+		
+		--font-heading: 'Manrope', sans-serif;
+		--font-body: 'DM Sans', sans-serif;
+	}
+
+	html {
+		font-family: var(--font-body);
+		background: var(--color-white);
+		color: var(--color-text);
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		color: var(--color-secondary);
+		margin: 0;
+	}
+
+	p {
+		line-height: 1.6;
+		color: var(--color-text-light);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+
+	.btn-primary {
+		background-color: var(--color-secondary);
+		color: var(--color-white);
+	}
+
+	.btn-primary:hover {
+		background-color: var(--color-primary);
+		transform: translateY(-2px);
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
+
+	.section-subtitle {
+		color: var(--color-primary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+		display: block;
+	}
+</style>

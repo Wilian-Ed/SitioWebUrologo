@@ -1,0 +1,87 @@
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-main">
+            <div class="footer-col">
+                <span class="logo-text">Clínica Urológica</span>
+                <p>Cuidado profesional y humano para su salud urológica.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>Edificio Médico San Lucas</p>
+                <p>Tel: 7763-7933</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {new Date().getFullYear()} Dr. Guillermo Antonio Ixquiac Pineda. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: var(--color-secondary);
+        color: white;
+        padding: 4rem 0 1rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 3rem;
+    }
+
+    .logo-text {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .footer-col h4 {
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+        display: block;
+        color: #94a3b8;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+        color: white;
+    }
+
+    .footer-col p {
+        color: #94a3b8;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom p {
+        color: #64748b;
+    }
+</style>

@@ -1,0 +1,75 @@
+---
+import { Activity } from 'lucide-astro';
+---
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="/" class="logo">
+            <Activity class="logo-icon" /> Clínica Urológica
+        </a>
+        <nav class="nav-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#doctor">Dr. Ixquiac</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
+    </div>
+</header>
+
+<style>
+    .header {
+        padding: 1.5rem 0;
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--color-secondary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-icon {
+        color: var(--color-primary);
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 2rem;
+        transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+        color: var(--color-primary);
+    }
+
+    @media (min-width: 768px) {
+        .nav-menu {
+            display: block;
+        }
+    }
+</style>
