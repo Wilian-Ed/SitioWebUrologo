@@ -1,21 +1,74 @@
 ---
-import { Activity } from 'lucide-astro';
+import { Activity, Menu, X } from 'lucide-astro';
 ---
 
 <header class="header">
     <div class="container nav-container">
-        <a href="/" class="logo">
-            <Activity class="logo-icon" /> Clínica Urológica
+        <a href="/" class="logo" aria-label="Clínica Urológica - Inicio">
+            <Activity class="logo-icon" aria-hidden="true" /> 
+            <span>Dr. Ixquiac <span class="logo-subtitle">Urología</span></span>
         </a>
-        <nav class="nav-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#doctor">Dr. Ixquiac</a>
-            <a href="#contacto">Contacto</a>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+            <Menu class="menu-icon" id="menuIcon" size={28} />
+            <X class="close-icon" id="closeIcon" size={28} style="display: none;" />
+        </button>
+
+        <nav class="nav-menu" id="navMenu" role="navigation">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#holep-info" class="nav-link">HoLEP</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#doctor" class="nav-link">Dr. Ixquiac</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
-        <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
+        <a href="#contacto" class="btn btn-primary btn-nav">Agendar Cita</a>
     </div>
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileMenuToggle?.addEventListener('click', () => {
+            const isOpen = navMenu?.classList.toggle('active');
+            if (menuIcon && closeIcon) {
+                menuIcon.style.display = isOpen ? 'none' : 'block';
+                closeIcon.style.display = isOpen ? 'block' : 'none';
+            }
+            mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu?.classList.remove('active');
+                if (menuIcon && closeIcon) {
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+                mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu?.contains(e.target as Node) && 
+                !mobileMenuToggle?.contains(e.target as Node) &&
+                navMenu?.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (menuIcon && closeIcon) {
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+                mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>
 
 <style>
     .header {
@@ -43,23 +96,70 @@ import { Activity } from 'lucide-astro';
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        z-index: 1001;
+    }
+
+    .logo span {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .logo-subtitle {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--color-primary);
     }
 
     .logo-icon {
         color: var(--color-primary);
         width: 32px;
         height: 32px;
+        flex-shrink: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        color: var(--color-secondary);
+        z-index: 1001;
+    }
+
+    .btn-nav {
+        display: none;
     }
 
     .nav-menu {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
     }
 
     .nav-menu a {
         color: var(--color-text);
         text-decoration: none;
         font-weight: 500;
-        margin-left: 2rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e2e8f0;
         transition: color 0.3s;
     }
 
@@ -68,8 +168,29 @@ import { Activity } from 'lucide-astro';
     }
 
     @media (min-width: 768px) {
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        .btn-nav {
+            display: inline-block;
+        }
+
         .nav-menu {
-            display: block;
+            position: static;
+            width: auto;
+            max-width: none;
+            height: auto;
+            flex-direction: row;
+            padding: 0;
+            box-shadow: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            margin-left: 2rem;
+            padding: 0;
+            border: none;
         }
     }
 </style>

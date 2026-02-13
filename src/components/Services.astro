@@ -6,25 +6,26 @@ import { Baby, Scan, Activity, Microscope, Zap, Users } from 'lucide-astro';
     <div class="container">
         <div class="section-header">
             <span class="section-subtitle">Nuestros Servicios</span>
-            <h2 class="section-title">Cuidado Médico Integral</h2>
-            <p>Diagnóstico y tratamiento avanzado para todas las condiciones urológicas.</p>
+            <h2 class="section-title">Cuidado Médico Integral en Urología</h2>
+            <p>Diagnóstico y tratamiento avanzado con tecnología de última generación para todas las condiciones urológicas.</p>
         </div>
 
         <div class="services-grid">
+            <div class="service-card featured">
+                <div class="icon">
+                    <Zap size={32} />
+                </div>
+                <h3>HoLEP - Cirugía Láser de Próstata</h3>
+                <p>El tratamiento más avanzado para hiperplasia prostática benigna (HPB). Procedimiento mínimamente invasivo con láser de holmio para próstatas de cualquier tamaño. Recuperación rápida y resultados duraderos.</p>
+                <a href="#holep-info" class="service-link">Más información →</a>
+            </div>
+
             <div class="service-card">
                 <div class="icon">
                     <Baby size={32} />
                 </div>
                 <h3>Urología General y Pediátrica</h3>
-                <p>Atención especializada para adultos y niños, abordando condiciones comunes y complejas del sistema urinario.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">
-                    <Scan size={32} />
-                </div>
-                <h3>Ultrasonido de Vía Urinarias</h3>
-                <p>Diagnóstico por imagen preciso para riñones, vejiga y próstata utilizando tecnología moderna.</p>
+                <p>Atención especializada para adultos y niños. Tratamiento de infecciones urinarias, incontinencia, problemas de vejiga, y condiciones congénitas del sistema urinario.</p>
             </div>
 
             <div class="service-card">
@@ -32,15 +33,15 @@ import { Baby, Scan, Activity, Microscope, Zap, Users } from 'lucide-astro';
                     <Activity size={32} />
                 </div>
                 <h3>Oncología Urológica</h3>
-                <p>Detección y tratamiento de cáncer de próstata, riñones, vejiga y testículos.</p>
+                <p>Detección temprana y tratamiento especializado de cáncer de próstata, riñones, vejiga y testículos. Seguimiento oncológico integral con tecnología de diagnóstico avanzado.</p>
             </div>
 
             <div class="service-card">
                 <div class="icon">
                     <Microscope size={32} />
                 </div>
-                <h3>Endourología</h3>
-                <p>Procedimientos mínimamente invasivos para tratar piedras y otras condiciones del tracto urinario.</p>
+                <h3>Endourología Avanzada</h3>
+                <p>Procedimientos mínimamente invasivos para tratar piedras renales, estenosis uretrales y otras patologías del tracto urinario mediante técnicas endoscópicas de última generación.</p>
             </div>
 
             <div class="service-card">
@@ -48,15 +49,31 @@ import { Baby, Scan, Activity, Microscope, Zap, Users } from 'lucide-astro';
                     <Zap size={32} />
                 </div>
                 <h3>Cálculos Renales y Litotricia</h3>
-                <p>Tratamiento efectivo para la eliminación de cálculos renales (piedras) mediante litotricia extracorpórea.</p>
+                <p>Tratamiento efectivo para la eliminación de cálculos renales (piedras en riñones) mediante litotricia extracorpórea por ondas de choque (ESWL) y cirugía endoscópica.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Scan size={32} />
+                </div>
+                <h3>Ultrasonido Urológico</h3>
+                <p>Diagnóstico por imagen de alta precisión para riñones, vejiga, próstata y vías urinarias. Ecografías especializadas con equipos de última tecnología.</p>
             </div>
 
             <div class="service-card">
                 <div class="icon">
                     <Users size={32} />
                 </div>
-                <h3>Infertilidad e Impotencia</h3>
-                <p>Diagnóstico y opciones de tratamiento para mejorar la salud reproductiva y sexual masculina.</p>
+                <h3>Salud Sexual y Reproductiva Masculina</h3>
+                <p>Diagnóstico y tratamiento de disfunción eréctil, eyaculación precoz, infertilidad masculina y trastornos hormonales. Abordaje integral y confidencial.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <Activity size={32} />
+                </div>
+                <h3>Cirugía Urológica Reconstructiva</h3>
+                <p>Procedimientos quirúrgicos especializados para reconstrucción de vías urinarias, corrección de malformaciones y tratamiento de traumas urológicos.</p>
             </div>
         </div>
     </div>
@@ -112,5 +129,46 @@ import { Baby, Scan, Activity, Microscope, Zap, Users } from 'lucide-astro';
         margin-bottom: 0.5rem;
         color: var(--color-secondary);
         font-size: 1.25rem;
+    }
+
+    .service-card.featured {
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+        color: white;
+        border: none;
+        grid-column: span 1;
+    }
+
+    .service-card.featured:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(14, 165, 233, 0.3);
+    }
+
+    .service-card.featured .icon {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+
+    .service-card.featured h3,
+    .service-card.featured p {
+        color: white;
+    }
+
+    .service-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+
+    .service-link:hover {
+        transform: translateX(5px);
+    }
+
+    @media (min-width: 992px) {
+        .service-card.featured {
+            grid-column: span 2;
+        }
     }
 </style>

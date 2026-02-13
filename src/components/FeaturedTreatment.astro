@@ -1,34 +1,73 @@
 ---
-import { Zap, CheckCircle2 } from 'lucide-astro';
+import { Zap, CheckCircle2, Award, Clock, TrendingUp } from 'lucide-astro';
 ---
 
-<section class="featured-treatment">
+<section id="inicio" class="featured-treatment">
     <div class="container treatment-container">
         <div class="treatment-content">
-            <span class="badge">Tecnología de Vanguardia</span>
-            <h1 class="treatment-title">Cirugía de Próstata con Láser de Holmio (HoLEP)</h1>
+            <span class="badge">Tecnología de Vanguardia en Urología</span>
+            <h1 class="treatment-title">HoLEP: Cirugía de Próstata con Láser de Holmio</h1>
             <p class="treatment-description">
-                El procedimiento utiliza un láser para extraer el tejido que bloquea el flujo de orina a través de la próstata. Es un tratamiento de invasión mínima similar a la cirugía abierta, pero sin incisiones.
+                <strong>El estándar de oro para el tratamiento del agrandamiento de próstata.</strong> 
+                HoLEP (Holmium Laser Enucleation of the Prostate) utiliza un láser de holmio de alta precisión 
+                para eliminar completamente el tejido prostático que obstruye el flujo urinario, ofreciendo 
+                resultados duraderos con mínima invasión.
             </p>
             
             <ul class="benefits-list">
                 <li>
                     <CheckCircle2 class="check-icon" size={20} />
-                    <span>Sin incisiones quirúrgicas (Mínima invasión)</span>
+                    <span><strong>Sin incisiones externas</strong> - Procedimiento mínimamente invasivo a través de la uretra</span>
                 </li>
                 <li>
                     <CheckCircle2 class="check-icon" size={20} />
-                    <span>Recuperación más rápida que la cirugía tradicional</span>
+                    <span><strong>Recuperación rápida</strong> - Alta hospitalaria en 24-48 horas, retorno a actividades en 2 semanas</span>
                 </li>
                 <li>
                     <CheckCircle2 class="check-icon" size={20} />
-                    <span>Solución efectiva para el agrandamiento grave</span>
+                    <span><strong>Resultados duraderos</strong> - Bajo riesgo de reintervención comparado con otros métodos</span>
+                </li>
+                <li>
+                    <CheckCircle2 class="check-icon" size={20} />
+                    <span><strong>Mínimo sangrado</strong> - Seguro para pacientes que toman anticoagulantes</span>
+                </li>
+                <li>
+                    <CheckCircle2 class="check-icon" size={20} />
+                    <span><strong>Para próstatas de cualquier tamaño</strong> - Efectivo incluso en casos severos (>100g)</span>
+                </li>
+                <li>
+                    <CheckCircle2 class="check-icon" size={20} />
+                    <span><strong>Preserva la función sexual</strong> - Alta tasa de preservación de la eyaculación</span>
                 </li>
             </ul>
 
+            <div class="stats-row">
+                <div class="stat">
+                    <Award class="stat-icon" size={24} />
+                    <div>
+                        <strong>95%</strong>
+                        <span>Tasa de éxito</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <Clock class="stat-icon" size={24} />
+                    <div>
+                        <strong>1-2 días</strong>
+                        <span>Hospitalización</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <TrendingUp class="stat-icon" size={24} />
+                    <div>
+                        <strong>Duradero</strong>
+                        <span>Resultados a largo plazo</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="treatment-actions">
-                <a href="#contacto" class="btn btn-primary">Agendar Evaluación</a>
-                <a href="#servicios" class="btn btn-text">Ver todos los servicios &rarr;</a>
+                <a href="#contacto" class="btn btn-primary">Agendar Evaluación HoLEP</a>
+                <a href="#holep-info" class="btn btn-text">Más sobre HoLEP &rarr;</a>
             </div>
         </div>
 
@@ -36,12 +75,13 @@ import { Zap, CheckCircle2 } from 'lucide-astro';
             <div class="image-card">
                 <img 
                     src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" 
-                    alt="Ilustración médica urología" 
+                    alt="Tecnología láser de holmio para cirugía de próstata HoLEP - Tratamiento mínimamente invasivo" 
                     class="main-image"
+                    loading="eager"
                 />
                 <div class="feature-badge">
                     <Zap class="feature-icon" />
-                    <span>Tecnología Láser de Holmio</span>
+                    <span>Láser de Holmio YAG</span>
                 </div>
             </div>
         </div>
@@ -114,6 +154,47 @@ import { Zap, CheckCircle2 } from 'lucide-astro';
     .check-icon {
         color: var(--color-primary);
         flex-shrink: 0;
+    }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .stat {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .stat-icon {
+        color: var(--color-primary);
+        flex-shrink: 0;
+    }
+
+    .stat div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .stat strong {
+        font-size: 1.25rem;
+        font-family: var(--font-heading);
+        color: var(--color-secondary);
+        line-height: 1;
+    }
+
+    .stat span {
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        line-height: 1;
     }
 
     .treatment-actions {

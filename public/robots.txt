@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sistemasdeguatemala.com.gt/Dr%20Guillermo%20Ixquiac/sitemap.xml

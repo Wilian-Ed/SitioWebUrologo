@@ -1,14 +1,118 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	ogImage?: string;
+}
+
+const {
+	title = 'Dr. Guillermo Antonio Ixquiac Pineda | Especialista en Urología y Cirugía HoLEP',
+	description = 'Urólogo certificado en Quetzaltenango especializado en HoLEP (Cirugía Láser de Próstata), urología pediátrica, oncológica y endourología. Más de 20 años de experiencia.',
+	keywords = 'urólogo, urología, HoLEP, cirugía próstata, láser holmio, cálculos renales, Quetzaltenango, Guatemala, urología pediátrica, oncología urológica',
+	ogImage = '/Dr%20Guillermo%20Ixquiac/og-image.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/Dr%20Guillermo%20Ixquiac/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Dr. Guillermo Antonio Ixquiac Pineda | Urólogo</title>
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(ogImage, Astro.site)} />
+		<meta property="og:locale" content="es_GT" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+		
+		<!-- Additional Meta Tags -->
+		<meta name="author" content="Dr. Guillermo Antonio Ixquiac Pineda" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="Spanish" />
+		<meta name="geo.region" content="GT-QZ" />
+		<meta name="geo.placename" content="Quetzaltenango" />
+		<meta name="geo.position" content="14.834;-91.519" />
+		
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Physician",
+			"name": "Dr. Guillermo Antonio Ixquiac Pineda",
+			"image": "https://sistemasdeguatemala.com.gt/Dr%20Guillermo%20Ixquiac/og-image.jpg",
+			"jobTitle": "Urólogo",
+			"medicalSpecialty": ["Urología General", "Urología Pediátrica", "Oncología Urológica", "Endourología"],
+			"knowsAbout": ["HoLEP", "Cirugía Láser de Próstata", "Cálculos Renales", "Litotricia"],
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Edificio Médico San Lucas, 13 Avenida 6-20 zona 3, Segundo Nivel, Clínica 214",
+				"addressLocality": "Quetzaltenango",
+				"addressRegion": "Quetzaltenango",
+				"addressCountry": "GT"
+			},
+			"telephone": "+502-7763-7933",
+			"url": "https://sistemasdeguatemala.com.gt/Dr%20Guillermo%20Ixquiac",
+			"sameAs": []
+		}
+		</script>
+		
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "MedicalBusiness",
+			"name": "Clínica Urológica Dr. Ixquiac",
+			"description": "Especialista en urología general, pediátrica y oncológica. Experto en procedimientos HoLEP con láser de holmio.",
+			"url": "https://sistemasdeguatemala.com.gt/Dr%20Guillermo%20Ixquiac",
+			"telephone": "+502-7763-7933",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Edificio Médico San Lucas, 13 Avenida 6-20 zona 3, Segundo Nivel, Clínica 214",
+				"addressLocality": "Quetzaltenango",
+				"postalCode": "09001",
+				"addressCountry": "GT"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "14.834",
+				"longitude": "-91.519"
+			},
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+					"opens": "09:00",
+					"closes": "18:00"
+				}
+			],
+			"priceRange": "$$"
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
