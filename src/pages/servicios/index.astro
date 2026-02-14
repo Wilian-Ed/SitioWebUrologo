@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
-import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'lucide-astro';
+import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors, FlaskConical, Clock, UserHeart, Award } from 'lucide-astro';
 ---
 
 <Layout 
@@ -120,25 +120,33 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 
 				<div class="benefits-grid">
 					<div class="benefit-card">
-						<div class="benefit-icon">🔬</div>
+						<div class="benefit-icon">
+							<FlaskConical size={48} />
+						</div>
 						<h3>Tecnología Avanzada</h3>
 						<p>Equipos de última generación para diagnóstico y tratamiento preciso</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">⚡</div>
+						<div class="benefit-icon">
+							<Clock size={48} />
+						</div>
 						<h3>Recuperación Rápida</h3>
 						<p>Procedimientos mínimamente invasivos que permiten volver pronto a sus actividades</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">❤️</div>
+						<div class="benefit-icon">
+							<UserHeart size={48} />
+						</div>
 						<h3>Atención Personalizada</h3>
 						<p>Trato humano y confidencial en cada consulta</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">✅</div>
+						<div class="benefit-icon">
+							<Award size={48} />
+						</div>
 						<h3>Experiencia Comprobada</h3>
 						<p>Más de 20 años de experiencia y 1000+ cirugías exitosas</p>
 					</div>
@@ -171,6 +179,11 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 		color: white;
 	}
 
+	.services-hero .section-subtitle {
+		color: white;
+		opacity: 0.9;
+	}
+
 	.hero-title {
 		font-size: 2.5rem;
 		color: white;
@@ -183,6 +196,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 		margin: 0 auto;
 		opacity: 0.95;
 		line-height: 1.6;
+		color: white;
 	}
 
 	.services-section {
@@ -305,8 +319,22 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 	}
 
 	.benefit-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		color: var(--color-primary);
+		width: 80px;
+		height: 80px;
+		background: var(--color-bg-light);
+		border-radius: 16px;
+		transition: all 0.3s;
+	}
+
+	.benefit-card:hover .benefit-icon {
+		background: var(--color-primary);
+		color: white;
+		transform: scale(1.1);
 	}
 
 	.benefit-card h3 {
