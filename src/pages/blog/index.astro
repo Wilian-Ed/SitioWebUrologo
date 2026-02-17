@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Calendar, User, Clock, BookOpen } from 'lucide-astro';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 // Para el futuro: cuando haya contenido de blog, se puede importar desde archivos markdown
 // import { getCollection } from 'astro:content';
 // const blogPosts = await getCollection('blog');
@@ -18,7 +20,7 @@ const blogPosts = [
 		author: 'Dr. Guillermo Ixquiac',
 		readTime: '3 min',
 		slug: '#',
-		image: '/Dr%20Guillermo%20Ixquiac/blog-placeholder.jpg'
+		image: `${baseUrl}/blog-placeholder.jpg`
 	}
 ];
 ---
@@ -89,8 +91,8 @@ const blogPosts = [
 					<h2>¿Necesita Atención Urológica?</h2>
 					<p>No espere más, programe su consulta hoy mismo</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Servicios</a>
+						<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${baseUrl}/servicios`} class="btn btn-outline">Ver Servicios</a>
 					</div>
 				</div>
 			</div>
