@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
-import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'lucide-astro';
+import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors, FlaskConical, Clock, HeartHandshake, Award } from 'lucide-astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -28,7 +29,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 			<div class="container">
 				<div class="services-grid">
 					<!-- HoLEP Featured -->
-					<a href="/servicios/holep" class="service-card featured">
+					<a href={`${baseUrl}/servicios/holep`} class="service-card featured">
 						<div class="icon">
 							<Zap size={40} />
 						</div>
@@ -38,7 +39,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Urología General -->
-					<a href="/servicios/urologia-general" class="service-card">
+					<a href={`${baseUrl}/servicios/urologia-general`} class="service-card">
 						<div class="icon">
 							<Activity size={32} />
 						</div>
@@ -48,7 +49,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Urología Oncológica -->
-					<a href="/servicios/urologia-oncologica" class="service-card">
+					<a href={`${baseUrl}/servicios/urologia-oncologica`} class="service-card">
 						<div class="icon">
 							<Heart size={32} />
 						</div>
@@ -58,7 +59,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Andrología -->
-					<a href="/servicios/andrologia" class="service-card">
+					<a href={`${baseUrl}/servicios/andrologia`} class="service-card">
 						<div class="icon">
 							<Users size={32} />
 						</div>
@@ -68,7 +69,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Procedimientos Especializados -->
-					<a href="/servicios/procedimientos-especializados" class="service-card">
+					<a href={`${baseUrl}/servicios/procedimientos-especializados`} class="service-card">
 						<div class="icon">
 							<Scissors size={32} />
 						</div>
@@ -78,7 +79,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Urología Pediátrica -->
-					<a href="/servicios/urologia-pediatrica" class="service-card">
+					<a href={`${baseUrl}/servicios/urologia-pediatrica`} class="service-card">
 						<div class="icon">
 							<Baby size={32} />
 						</div>
@@ -88,7 +89,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Cálculos Renales -->
-					<a href="/servicios/calculos-renales" class="service-card">
+					<a href={`${baseUrl}/servicios/calculos-renales`} class="service-card">
 						<div class="icon">
 							<Zap size={32} />
 						</div>
@@ -98,7 +99,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					</a>
 
 					<!-- Diagnóstico -->
-					<a href="/servicios/diagnostico" class="service-card">
+					<a href={`${baseUrl}/servicios/diagnostico`} class="service-card">
 						<div class="icon">
 							<Scan size={32} />
 						</div>
@@ -120,25 +121,33 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 
 				<div class="benefits-grid">
 					<div class="benefit-card">
-						<div class="benefit-icon">🔬</div>
+						<div class="benefit-icon">
+							<FlaskConical size={48} />
+						</div>
 						<h3>Tecnología Avanzada</h3>
 						<p>Equipos de última generación para diagnóstico y tratamiento preciso</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">⚡</div>
+						<div class="benefit-icon">
+							<Clock size={48} />
+						</div>
 						<h3>Recuperación Rápida</h3>
 						<p>Procedimientos mínimamente invasivos que permiten volver pronto a sus actividades</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">❤️</div>
+						<div class="benefit-icon">
+							<HeartHandshake size={48} />
+						</div>
 						<h3>Atención Personalizada</h3>
 						<p>Trato humano y confidencial en cada consulta</p>
 					</div>
 
 					<div class="benefit-card">
-						<div class="benefit-icon">✅</div>
+						<div class="benefit-icon">
+							<Award size={48} />
+						</div>
 						<h3>Experiencia Comprobada</h3>
 						<p>Más de 20 años de experiencia y 1000+ cirugías exitosas</p>
 					</div>
@@ -153,8 +162,8 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 					<h2>¿Necesita Atención Urológica?</h2>
 					<p>Programe su consulta y reciba un diagnóstico profesional</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/sobre-mi" class="btn btn-outline">Conocer al Doctor</a>
+						<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${baseUrl}/sobre-mi`} class="btn btn-outline">Conocer al Doctor</a>
 					</div>
 				</div>
 			</div>
@@ -171,6 +180,11 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 		color: white;
 	}
 
+	.services-hero .section-subtitle {
+		color: white;
+		opacity: 0.9;
+	}
+
 	.hero-title {
 		font-size: 2.5rem;
 		color: white;
@@ -183,6 +197,7 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 		margin: 0 auto;
 		opacity: 0.95;
 		line-height: 1.6;
+		color: white;
 	}
 
 	.services-section {
@@ -305,8 +320,22 @@ import { Baby, Scan, Activity, Microscope, Zap, Users, Heart, Scissors } from 'l
 	}
 
 	.benefit-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		color: var(--color-primary);
+		width: 80px;
+		height: 80px;
+		background: var(--color-bg-light);
+		border-radius: 16px;
+		transition: all 0.3s;
+	}
+
+	.benefit-card:hover .benefit-icon {
+		background: var(--color-primary);
+		color: white;
+		transform: scale(1.1);
 	}
 
 	.benefit-card h3 {

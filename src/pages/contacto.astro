@@ -1,0 +1,340 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { MapPin, Phone, MessageCircle, Clock, Mail } from 'lucide-astro';
+---
+
+<Layout 
+	title="Contacto | Dr. Guillermo Ixquiac"
+	description="Contacte a la clínica urológica del Dr. Guillermo Ixquiac en Quetzaltenango. Agende su cita por teléfono, WhatsApp o visite nuestra ubicación."
+	keywords="contacto urólogo, agendar cita urología, Quetzaltenango, Dr. Ixquiac contacto"
+>
+	<Navbar />
+	<main>
+		<!-- Hero Section -->
+		<section class="contact-hero">
+			<div class="container">
+				<span class="section-subtitle">Contáctenos</span>
+				<h1 class="hero-title">Agende su Consulta</h1>
+				<p class="hero-text">
+					Estamos para servirle. Comuníquese con nosotros para agendar su cita o resolver sus dudas
+				</p>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact-section">
+			<div class="container">
+				<div class="contact-wrapper">
+					<div class="contact-info">
+						<h2 class="info-title">Información de Contacto</h2>
+						<p class="info-description">Estamos ubicados en una zona central y accesible de Quetzaltenango.</p>
+						
+						<div class="info-items">
+							<div class="item">
+								<div class="icon-box">
+									<MapPin size={24} />
+								</div>
+								<div>
+									<h4>Dirección</h4>
+									<p>Edificio Médico San Lucas<br>
+									13 Avenida 6-20 zona 3, Segundo Nivel, Clínica 214<br>
+									Quetzaltenango, Guatemala</p>
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="icon-box">
+									<Phone size={24} />
+								</div>
+								<div>
+									<h4>Teléfonos</h4>
+									<p>
+										<a href="tel:77637933">7763-7933</a><br>
+										<a href="tel:22323232">2232-3232</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="icon-box">
+									<Clock size={24} />
+								</div>
+								<div>
+									<h4>Horario de Atención</h4>
+									<p>
+										Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+										Sábado: Con cita previa
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="cta-box">
+							<h3>¿Listo para agendar?</h3>
+							<div class="cta-buttons">
+								<a href="tel:77637933" class="btn btn-primary">
+									<Phone size={20} />
+									Llamar Ahora
+								</a>
+								<a href="https://wa.me/50277637933?text=Hola,%20me%20gustaría%20agendar%20una%20consulta%20con%20el%20Dr.%20Ixquiac" 
+								   target="_blank" 
+								   rel="noopener noreferrer" 
+								   class="btn btn-whatsapp">
+									<MessageCircle size={20} />
+									WhatsApp
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="map-container">
+						<iframe 
+							width="100%" 
+							height="100%" 
+							frameborder="0" 
+							scrolling="no" 
+							marginheight="0" 
+							marginwidth="0" 
+							src="https://maps.google.com/maps?q=Edificio%20M%C3%A9dico%20San%20Lucas%2C%2013%20Avenida%206-20%20zona%203%2C%20Quetzaltenango&t=&z=15&ie=UTF8&iwloc=&output=embed"
+							title="Ubicación Clínica"
+							loading="lazy"
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="faq-section">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Preguntas Frecuentes</span>
+					<h2 class="section-title">¿Tiene dudas?</h2>
+				</div>
+
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>¿Necesito una cita previa?</h3>
+						<p>Sí, trabajamos con sistema de citas para brindarle una mejor atención. Puede agendar por teléfono o WhatsApp.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Qué documentos necesito llevar?</h3>
+						<p>Por favor traiga su DPI, carnet del seguro (si aplica), y estudios médicos previos relacionados con su consulta.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Aceptan seguros médicos?</h3>
+						<p>Sí, aceptamos varios seguros médicos. Consulte al momento de agendar su cita para verificar convenios vigentes.</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>¿Dónde puedo estacionarme?</h3>
+						<p>El Edificio Médico San Lucas cuenta con parqueo disponible para pacientes en el mismo edificio.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.contact-hero {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		padding: 6rem 0 4rem;
+		text-align: center;
+		color: white;
+	}
+
+	.contact-hero .section-subtitle {
+		color: white;
+		opacity: 0.9;
+	}
+
+	.hero-title {
+		font-size: 2.5rem;
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.hero-text {
+		font-size: 1.15rem;
+		max-width: 700px;
+		margin: 0 auto;
+		opacity: 0.95;
+		line-height: 1.6;
+		color: white;
+	}
+
+	.contact-section {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.contact-wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		background: white;
+		border-radius: 24px;
+		overflow: hidden;
+		box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+	}
+
+	.contact-info {
+		padding: 3rem;
+	}
+
+	.info-title {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--color-secondary);
+	}
+
+	.info-description {
+		margin-bottom: 2rem;
+		font-size: 1.1rem;
+	}
+
+	.info-items {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.item {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.icon-box {
+		width: 50px;
+		height: 50px;
+		background: var(--color-bg-light);
+		color: var(--color-primary);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 12px;
+		flex-shrink: 0;
+	}
+
+	.item h4 {
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+		color: var(--color-secondary);
+	}
+
+	.item p {
+		line-height: 1.6;
+	}
+
+	.item a {
+		color: var(--color-primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.item a:hover {
+		text-decoration: underline;
+	}
+
+	.map-container {
+		min-height: 500px;
+		background: #eee;
+	}
+
+	.cta-box {
+		margin-top: 2rem;
+		padding-top: 2rem;
+		border-top: 1px solid #eee;
+	}
+
+	.cta-box h3 {
+		margin-bottom: 1rem;
+		color: var(--color-secondary);
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.btn-whatsapp {
+		background-color: #25D366;
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.btn-whatsapp:hover {
+		background-color: #20BA5A;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+	}
+
+	.faq-section {
+		padding: 5rem 0;
+		background: #f8fafc;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.faq-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+	}
+
+	.faq-item h3 {
+		font-size: 1.15rem;
+		margin-bottom: 0.75rem;
+		color: var(--color-secondary);
+	}
+
+	.faq-item p {
+		line-height: 1.6;
+	}
+
+	@media (min-width: 768px) {
+		.hero-title {
+			font-size: 3.5rem;
+		}
+
+		.contact-wrapper {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.map-container {
+			min-height: 600px;
+		}
+	}
+</style>

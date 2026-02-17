@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Zap, CheckCircle, Clock, Heart, Shield } from 'lucide-astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -157,7 +158,7 @@ import { Zap, CheckCircle, Clock, Heart, Shield } from 'lucide-astro';
 						<div class="highlight-box alert">
 							<h3>¿Tiene estos síntomas?</h3>
 							<p>No espere a que empeoren. Una evaluación temprana puede prevenir complicaciones graves y mejorar significativamente su calidad de vida.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Evaluación</a>
+							<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Evaluación</a>
 						</div>
 					</div>
 				</div>
@@ -315,8 +316,8 @@ import { Zap, CheckCircle, Clock, Heart, Shield } from 'lucide-astro';
 					<h2>¿Listo para Recuperar su Calidad de Vida?</h2>
 					<p>Agende su evaluación y descubra si HoLEP es la solución para usted</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/sobre-mi" class="btn btn-outline">Conocer al Doctor</a>
+						<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${baseUrl}/sobre-mi`} class="btn btn-outline">Conocer al Doctor</a>
 					</div>
 				</div>
 			</div>
