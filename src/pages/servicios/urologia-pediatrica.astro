@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Baby, CheckCircle, Heart, Shield, Activity, Users } from 'lucide-astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -157,7 +158,7 @@ import { Baby, CheckCircle, Heart, Shield, Activity, Users } from 'lucide-astro'
 						<div class="highlight-box alert">
 							<h3>¿Su Hijo Presenta Alguna de Estas Condiciones?</h3>
 							<p>La evaluación temprana por un especialista puede prevenir complicaciones futuras y asegurar el desarrollo normal de su hijo.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
+							<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Consulta</a>
 						</div>
 					</div>
 				</div>
@@ -315,8 +316,8 @@ import { Baby, CheckCircle, Heart, Shield, Activity, Users } from 'lucide-astro'
 					<h2>¿Preocupado por la Salud Urológica de su Hijo?</h2>
 					<p>Evaluación especializada con un enfoque cálido y profesional</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+						<a href={`${baseUrl}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${baseUrl}/servicios`} class="btn btn-outline">Ver Todos los Servicios</a>
 					</div>
 				</div>
 			</div>
