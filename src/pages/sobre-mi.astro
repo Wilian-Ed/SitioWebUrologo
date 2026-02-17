@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { ShieldCheck, Award, Heart, Briefcase } from 'lucide-astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -237,8 +239,8 @@ import { ShieldCheck, Award, Heart, Briefcase } from 'lucide-astro';
 					<h2>¿Listo para Cuidar de Su Salud Urológica?</h2>
 					<p>Agende su consulta hoy y reciba atención médica de excelencia</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Servicios</a>
+						<a href={`${base}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${base}/servicios`} class="btn btn-outline">Ver Servicios</a>
 					</div>
 				</div>
 			</div>

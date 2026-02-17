@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Scissors, CheckCircle, Zap, Shield, Activity, Eye } from 'lucide-astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -157,7 +159,7 @@ import { Scissors, CheckCircle, Zap, Shield, Activity, Eye } from 'lucide-astro'
 						<div class="highlight-box alert">
 							<h3>¿Necesita un Procedimiento Urológico?</h3>
 							<p>Evaluamos su caso para determinar la mejor técnica según su condición, minimizando riesgos y optimizando resultados.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Evaluación</a>
+							<a href={`${base}/contacto`} class="btn btn-primary">Agendar Evaluación</a>
 						</div>
 					</div>
 				</div>
@@ -316,8 +318,8 @@ import { Scissors, CheckCircle, Zap, Shield, Activity, Eye } from 'lucide-astro'
 					<h2>¿Necesita un Procedimiento Urológico?</h2>
 					<p>Evaluación personalizada para determinar la mejor opción para su caso</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+						<a href={`${base}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${base}/servicios`} class="btn btn-outline">Ver Todos los Servicios</a>
 					</div>
 				</div>
 			</div>

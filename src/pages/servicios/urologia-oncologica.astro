@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Shield, CheckCircle, Clock, Heart, Activity, Search } from 'lucide-astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -157,7 +159,7 @@ import { Shield, CheckCircle, Clock, Heart, Activity, Search } from 'lucide-astr
 						<div class="highlight-box alert">
 							<h3>¿Tiene Factores de Riesgo?</h3>
 							<p>Si tiene más de 50 años, historia familiar de cáncer urológico, o presenta síntomas, es crucial una evaluación especializada.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Evaluación</a>
+							<a href={`${base}/contacto`} class="btn btn-primary">Agendar Evaluación</a>
 						</div>
 					</div>
 				</div>
@@ -315,8 +317,8 @@ import { Shield, CheckCircle, Clock, Heart, Activity, Search } from 'lucide-astr
 					<h2>La Detección Temprana Salva Vidas</h2>
 					<p>Agende su evaluación oncológica preventiva hoy mismo</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+						<a href={`${base}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${base}/servicios`} class="btn btn-outline">Ver Todos los Servicios</a>
 					</div>
 				</div>
 			</div>

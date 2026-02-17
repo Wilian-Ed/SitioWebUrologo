@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Stethoscope, CheckCircle, Clock, Heart, Shield, AlertCircle } from 'lucide-astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -157,7 +159,7 @@ import { Stethoscope, CheckCircle, Clock, Heart, Shield, AlertCircle } from 'luc
 						<div class="highlight-box alert">
 							<h3>¿Experimenta Estos Síntomas?</h3>
 							<p>No ignore los síntomas urológicos. Una consulta oportuna puede prevenir complicaciones y mejorar significativamente su calidad de vida.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
+							<a href={`${base}/contacto`} class="btn btn-primary">Agendar Consulta</a>
 						</div>
 					</div>
 				</div>
@@ -264,8 +266,8 @@ import { Stethoscope, CheckCircle, Clock, Heart, Shield, AlertCircle } from 'luc
 					<h2>¿Necesita Atención Urológica?</h2>
 					<p>No espere a que los síntomas empeoren. Consulte hoy mismo para un diagnóstico preciso</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Consulta</a>
-						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+						<a href={`${base}/contacto`} class="btn btn-primary">Agendar Consulta</a>
+						<a href={`${base}/servicios`} class="btn btn-outline">Ver Todos los Servicios</a>
 					</div>
 				</div>
 			</div>

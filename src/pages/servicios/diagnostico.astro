@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import { Search, CheckCircle, Activity, Eye, Clipboard, Microscope } from 'lucide-astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout 
@@ -158,7 +160,7 @@ import { Search, CheckCircle, Activity, Eye, Clipboard, Microscope } from 'lucid
 						<div class="highlight-box alert">
 							<h3>¿Necesita un Diagnóstico Preciso?</h3>
 							<p>Contamos con el equipamiento necesario para realizar una evaluación completa y llegar a un diagnóstico certero en el menor tiempo posible.</p>
-							<a href="/contacto" class="btn btn-primary">Agendar Estudios</a>
+							<a href={`${base}/contacto`} class="btn btn-primary">Agendar Estudios</a>
 						</div>
 					</div>
 				</div>
@@ -363,8 +365,8 @@ import { Search, CheckCircle, Activity, Eye, Clipboard, Microscope } from 'lucid
 					<h2>¿Necesita Estudios Diagnósticos?</h2>
 					<p>Evaluación completa con tecnología avanzada para diagnóstico preciso y oportuno</p>
 					<div class="cta-buttons">
-						<a href="/contacto" class="btn btn-primary">Agendar Estudios</a>
-						<a href="/servicios" class="btn btn-outline">Ver Todos los Servicios</a>
+						<a href={`${base}/contacto`} class="btn btn-primary">Agendar Estudios</a>
+						<a href={`${base}/servicios`} class="btn btn-outline">Ver Todos los Servicios</a>
 					</div>
 				</div>
 			</div>
